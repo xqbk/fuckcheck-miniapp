@@ -23,7 +23,7 @@ const subDomain = "/api";
 // const API_BASE_URL = "https://192.168.31.50:3000"; // 主域名
 // const API_BASE_URL = "https://192.168.31.50:3000"; // 主域名
 
-const API_BASE_URL = "https://qj.ovinet.cn:4444"; // 主域名
+const API_BASE_URL = "https://qj.ovinet.cn"; // 主域名
 
 const request = (url, method, data) => {
   let _url = API_BASE_URL + subDomain + url;

@@ -40,7 +40,6 @@ Page({
     wx.login({
       success: (res) => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log("wxlogin: ",res);
         if (res.code) {
           request("/auth/login", "POST", res)
             .then((data) => {
@@ -80,7 +79,6 @@ Page({
         page,
       });
     }
-    console.error("login")
     this.handleLogin();
   },
 
