@@ -1,0 +1,33 @@
+/* pages/admin/admin.wxss */
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 30rpx;
+}
+.admin-container{
+    margin-bottom: 30rpx;
+}
+.form-container{
+    padding: 35rpx 48rpx;
+}
+.slider-container{
+    padding: 40rpx 20rpx;
+}
+.load-container{
+    text-align: center;
+}
+
+.no-more-container{
+    text-align: center;
+    padding: 50rpx;
+    color: rgb(139, 131, 131);
+}
+
+.sub-title{
+    color: rgb(110, 108, 108);
+    padding-bottom: 30rpx;
+}
+

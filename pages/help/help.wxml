@@ -1,0 +1,32 @@
+<view class="titleImg">
+     
+    <ad-custom unit-id="adunit-aa281f50bf18875f"></ad-custom>
+  <view class="font">帮助</view>
+</view>
+<ad unit-id="adunit-a54af21d57dce6bd" ad-type="video" ad-theme="white"></ad>
+<view class="lineYellow"></view>
+
+<view class="content">
+  <view class="title">您可能遇到的问题1：</view>
+  <view class="font">您需要在任务里添加配置
+  填写“任务名称”，“任务类型”，“签到地点请填写'原地址'三个字 以及打卡签到时间”，</view>
+  <ad-custom unit-id="adunit-aa281f50bf18875f"></ad-custom>
+  <view class="title">您可能遇到的问题2：</view>
+  <view class="font">请在提交任务前一天手动打卡，以便系统获取打卡内容以及定位等</view>
+
+
+  <view class="title">您可能遇到的问题3：</view>
+  <view class="font">您需要前往发卡网购买卡密（账号卡密，月卡卡密，周卡卡密）；账号卡密可让您增加一个添加执行任务的名额；月卡周卡则是您打卡生效时间</view>
+  <view class="title">教程：</view>
+  <image src="../help/jiaocheng.png"/>
+
+  <ad-custom unit-id="adunit-aa281f50bf18875f"></ad-custom>
+<view class="title">卡密购买地址</view>
+
+<view bindtap='copyBtn' data-link='http://www.jburl.cf' style="background-color: #b62727;color: white;font-size: 25rpx;width: 300rpx;height: 50rpx;margin: 10rpx;border-radius: 20rpx;">
+<text style="margin: 22rpx;">点我复制浏览器购买{{link}}</text>
+</view>
+
+</view>
+
+<view class="botton" style="color: gray; margin-top: 50rpx;text-align: center;font-size: 26rpx;">——2022/08/28 小助手 编辑——</view>

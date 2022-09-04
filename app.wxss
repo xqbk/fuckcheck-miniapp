@@ -1,0 +1,12 @@
+/**app.wxss**/
+@import 'miniprogram_npm/wux-weapp/styles/index.wxss';
+.container {
+  /* background-color: rgb(241, 241, 241); */
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  padding-bottom: 120rpx;
+  /* font-size: 40rpx; */
+}
+.field-style{
+  font-size: 32rpx;
+}

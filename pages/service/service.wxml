@@ -1,0 +1,38 @@
+<!--pages/service/service.wxml-->
+
+<view class="container">
+
+  <sub-title title="服务信息"></sub-title>
+  <ad-custom unit-id="adunit-b9e88db897160557"></ad-custom>
+  <view class="service-container">
+    <view>签到到期时间：{{expireDate}}</view>
+    <view>当前账号容量：{{stu_amount}} </view>
+  </view>
+
+  <sub-title title="使用卡密"></sub-title>
+
+  <view class="input-container">
+    <van-field model:value="{{ value }}" placeholder="请输入卡密" size="large" bind:change="onChange">
+      <van-button slot="button" size="small" type="primary" bind:click="useCard">
+      确认
+    </van-button>
+    </van-field>
+  </view>
+  <sub-title title="卡密说明"></sub-title>
+  <ad unit-id="adunit-a54af21d57dce6bd" ad-type="video" ad-theme="white"></ad>
+  <view class="service-container">
+
+    <view>月卡卡密：使用后增加一月的签到期限</view>
+    <view>周卡卡密：使用后增加一周的签到期限</view>
+    <view>账号卡密：使用后增加一个签到账号</view>
+    <view class="title">卡密购买地址</view>
+    <image src="https://pan1.1oxy.cn/22425/kawang.png"></image>
+  </view>
+  <ad-custom unit-id="adunit-b9e88db897160557"></ad-custom>
+  <!-- <view style="text-align: center;">
+        <image style="width: 320rpx; height: 320rpx; " src="../../static/shop.jpg" mode="aspectFit" show-menu-by-longpress/>
+    </view> -->
+
+  <van-toast id="van-toast" />
+   
+</view>

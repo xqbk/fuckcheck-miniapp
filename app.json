@@ -1,0 +1,47 @@
+{
+    
+
+
+    "tabBar": {
+        "custom": true,
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "backgroundColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/tasks/tasks",
+                "text": "renwu"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "我的"
+            }
+        ]
+    },
+    "pages": [
+        "pages/splash/splash",
+        "pages/index/index",
+        "pages/tasks/tasks",
+        "pages/profile/profile",
+        "pages/editTask/edit",
+        "pages/editStu/edit",
+        "pages/logs/logs",
+        "pages/push/push",
+        "pages/service/service",
+        "pages/admin/admin",
+        "pages/help/help"
+  
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "自动任务提交助手",
+        "navigationBarTextStyle": "black"
+    },
+
+    "sitemapLocation": "sitemap.json"
+}

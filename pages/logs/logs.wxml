@@ -1,0 +1,89 @@
+<view class="container">
+  <van-sticky offset-top="{{ 0 }}">
+    <van-dropdown-menu>
+      <van-dropdown-item bind:change="onChangeStuid" value="{{ stuid }}" options="{{ option }}" />
+      <van-dropdown-item id="select" title="筛选">
+        <van-cell title="提交成功">
+          <van-switch slot="right-icon" size="24px" style="height: 26px" checked="{{ used }}" active-color="#ee0a24" bind:change="onSucceeChange" />
+        </van-cell>
+        <van-cell title="提交失败">
+          <van-switch slot="right-icon" size="24px" style="height: 26px" checked="{{ unused }}" active-color="#ee0a24" bind:change="onFailChange" />
+        </van-cell>
+        <view style="padding: 20rpx 16px;">
+          <van-button type="primary" block round bind:click="onSelectConfirm">
+            确认
+          </van-button>
+        </view>
+      </van-dropdown-item>
+    </van-dropdown-menu>
+  </van-sticky>
+
+
+  <view wx:if="{{cards.length === 0}}">
+    <van-empty description="当前未添加任务" />
+  </view>
+  <wxs src="./logs.wxs" module="utils"></wxs>
+  <scroll-view wx:else scroll-y="true" class="admin-container">
+    <van-cell-group inset>
+      <block wx:for="{{showingLogs}}" wx:for-item="item" wx:key="id" wx:for-index="index">
+          <van-cell border="{{false}}" size="large" use-label-slot title-width="450rpx" title="{{utils.timeFormat(item.time)}}">
+
+          <view slot="label">{{item.stuid.stuid}}-{{item.description}} </view>
+            <view>
+              <!-- {{item.value}} -->
+              <block wx:if="{{item.status === true}}">
+                <van-tag size="large" type="success">成功</van-tag>
+              </block>
+              <block wx:else>
+                <van-tag size="large" type="danger">失败</van-tag>
+              </block>
+            </view>
+          </van-cell>
+
+      </block>
+
+    </van-cell-group>
+
+    <block wx:if="{{loading}}">
+      <view class="load-container">
+        <van-loading size="100rpx" vertical >加载中...</van-loading>
+      </view>
+    </block>
+
+    <block wx:if="{{none}}">
+      <van-empty description="还没有任何日志" />
+    </block>
+
+    <block wx:if="{{!none && over}}">
+      <view class="no-more-container">
+        暂无更多...
+      </view>
+    </block>
+
+  </scroll-view>
+
+  <!-- <van-dialog id="van-dialog" message-align="left" /> -->
+
+  <van-dialog id="van-dialog" use-title-slot use-slot show-cancel-button>
+    <view class="form-container">
+      <view class="sub-title">卡密类型</view>
+      <view style="padding-bottom: 30rpx;">
+        <van-checkbox-group direction="horizontal" value="{{ cardKind }}" bind:change="onSelectChange">
+          <van-checkbox name="MONTH">月卡</van-checkbox>
+          <van-checkbox name="WEEK">周卡</van-checkbox>
+          <van-checkbox name="ACCOUNT">账号卡</van-checkbox>
+        </van-checkbox-group>
+      </view>
+      <view class="sub-title">生成数量</view>
+      <view slot="input" class="slider-container">
+        <van-slider min="1" max="10" bar-height="10rpx" value="{{amount}}" use-button-slot bind:change="onAmountChange">
+          <van-tag size="large" round type="primary" slot="button">{{amount}}</van-tag>
+        </van-slider>
+      </view>
+    </view>
+    <view slot="title" style="font-size: 40rpx;">添加卡密</view>
+  </van-dialog>
+
+  <van-toast id="van-toast" />
+</view>
+ 
